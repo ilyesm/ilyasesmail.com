@@ -13,18 +13,7 @@
 			height: 100%;
 		}
 	</style>
-	<script>
-		// update with the desired time to refresh the presentation (in minutes)
-		var refreshMinutes = 1;
-		
-		var timer=setInterval(function(){refreshFrame()}, refreshMinutes*60*1000);
-		function refreshFrame()
-		{
-			var iframe = document.getElementById('presentFrame');
-			var iframeURL = iframe.src;
-			iframe.src = iframeURL;
-		}
-	</script>
+	<meta http-equiv="refresh" content="10">
 </head>
   
 <body>
