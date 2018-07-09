@@ -1,10 +1,33 @@
 <!DOCTYPE html>
+
 <html lang="en">
+  
 <head>
 <title>DJC Live</title>
-<meta http-equiv="refresh" content="10">
+	<style>
+		html, body {
+			background: black;
+			padding: 0;
+			margin: 0;
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+	<script>
+		// update with the desired time to refresh the presentation (in minutes)
+		var refreshMinutes = 30;
+		
+		var timer=setInterval(function(){refreshFrame()}, refreshMinutes*60*1000);
+		function refreshFrame()
+		{
+			var iframe = document.getElementById('presentFrame');
+			var iframeURL = iframe.src;
+			iframe.src = iframeURL;
+		}
+	</script>
 </head>
+  
 <body>
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQj8i1lrTKcr6F-vfpM5PDgHgU-B7Cl6QiSw-SBpODd05w2qDMfiQiB66yFFovgLGlJI2Mg7JZOFGNF/embed?start=true&loop=true&delayms=5000" frameborder="0" width="100%" height="100%" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe id="presentFrame" src="https://docs.google.com/presentation/d/e/2PACX-1vQj8i1lrTKcr6F-vfpM5PDgHgU-B7Cl6QiSw-SBpODd05w2qDMfiQiB66yFFovgLGlJI2Mg7JZOFGNF/embed?start=true&loop=true&delayms=5000" frameborder="0" width="100%" height="100%" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 </body>
 </html>
